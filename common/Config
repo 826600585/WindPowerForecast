@@ -1,0 +1,43 @@
+[trainfile]
+#风电场编号
+windnumber = J00154
+#训练集文件位置
+filepath = ./data/J00154_Merge2.xlsx
+#选联机文件sheet名
+sheetname = 汇总
+#跳过行数
+skiprow = 0
+#使用行数
+userow = 50000
+
+[testfile]
+#测试集文件位置
+filepath =./data/J00154_Merge2.xlsx
+#模型存放位置
+modelfilepath =./model/modelJ00154finalloss.pt
+#测试集sheet名
+sheetname = 汇总
+#跳过行数
+skiprow = 53000
+#使用行数
+userow = 3000
+
+[model]
+#模型输入大小
+inputsize = 20
+#模型隐藏层大小
+hiddensize = 40
+#模型线性层大小
+linearsize = 500
+#学习率
+learnrate = 0.001
+#学习轮次
+epoch = 10
+#LSTM层数
+numlayers = 1
+#额定功率
+maxpower = 94.6
+#随机种子数
+randomseed = 40
+#累积该次数后进行反向传播
+backpropagation = 1000
